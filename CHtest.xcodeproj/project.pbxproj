@@ -32,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1316F7C1B1ED64900DA09AF /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C1427BB71B1EE59E003689BE /* testClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testClass.h; sourceTree = "<group>"; };
 		C165B39F1B1C5A4200456AD8 /* VerifyRegexTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyRegexTool.h; sourceTree = "<group>"; };
 		C165B3A01B1C5A4200456AD8 /* VerifyRegexTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyRegexTool.m; sourceTree = "<group>"; };
 		C165B3A21B1C5D2300456AD8 /* IDCardVerifyAndExtractTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardVerifyAndExtractTool.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C16E46D61B1C575D001C076C /* AppDelegate.m */,
 				C16E46D81B1C575D001C076C /* ViewController.h */,
 				C16E46D91B1C575D001C076C /* ViewController.m */,
+				C1427BB71B1EE59E003689BE /* testClass.h */,
 				C16E46DB1B1C575D001C076C /* Main.storyboard */,
 				C16E46DE1B1C575D001C076C /* Images.xcassets */,
 				C16E46E01B1C575D001C076C /* LaunchScreen.xib */,
@@ -121,6 +124,7 @@
 				C16E46D21B1C575D001C076C /* Info.plist */,
 				C16E46D31B1C575D001C076C /* main.m */,
 				C1FF71BC1B1D4E4D005AA201 /* idCardProvinceList.plist */,
+				C1316F7C1B1ED64900DA09AF /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,7 +191,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = exmaple;
+				ORGANIZATIONNAME = isoftstone;
 				TargetAttributes = {
 					C16E46CD1B1C575C001C076C = {
 						CreatedOnToolsVersion = 6.3;
@@ -375,6 +379,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CHTest/PrefixHeader.pch";
 				INFOPLIST_FILE = CHtest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,6 +391,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CHTest/PrefixHeader.pch";
 				INFOPLIST_FILE = CHtest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

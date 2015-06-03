@@ -28,8 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.myView.backgroundColor = [UIColor redColor];
-    
     // Do any additional setup after loading the view, typically from a nib.
+    debugMethod();
 }
 
 
@@ -65,7 +65,7 @@
         [self clearData];
         NSLog(@"8位日期格式（YYYYMMdd）不正确");
     }
-    
+    debugMethod();
 }
 
 - (void)clearData{
@@ -75,6 +75,7 @@
     self.myAgeLabel.text          = @"";
     self.myProvinceLabel.text     = @"";
     self.myViliditydateLabel.text = @"";
+    debugMethod();
 }
 
 - (void)didReceiveMemoryWarning {
