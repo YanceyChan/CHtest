@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5B414417-BCAF-47F1-8342-FDA18092295C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CHtest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>13C96818E6C94546A2ED1D394116E91F9537854E</key>
 		<string>https://github.com/chenysh521/CHtest.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CHtest.xcodeproj/project.xcworkspace</string>
+	<string>CHtest.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>13C96818E6C94546A2ED1D394116E91F9537854E</key>
