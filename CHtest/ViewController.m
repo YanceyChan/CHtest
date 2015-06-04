@@ -84,9 +84,10 @@
 }
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
     NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
-    return [toBeString onlyHasDigitLength:6 plusAndMinusSign:NO];
+    return [toBeString onlyHasDigitLength:18 plusAndMinusSign:NO];
     
 }
 
