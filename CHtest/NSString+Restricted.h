@@ -55,5 +55,12 @@
  */
 - (BOOL)onlyHasDigitLength:(NSInteger)length plusAndMinusSign:(BOOL)plusOrMinus;
 
-
+/**
+ *  限制只包含数字和Xx（身份证输入）
+ *
+ *  @param length 长度
+ *
+ *  @return YES--符合  NO--不符合
+ */
+- (BOOL)hasDigitAndXLength:(NSInteger)length;
 @end

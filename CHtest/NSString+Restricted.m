@@ -39,8 +39,11 @@
         return [self restrictStringFollowRegex:regex];
     }
     
-    
-    
+}
+
+- (BOOL)hasDigitAndXLength:(NSInteger)length{
+    NSString *regex = [NSString stringWithFormat:@"^[0-9Xx]{0,%ld}$", length];
+    return [self restrictStringFollowRegex:regex];
 }
 
 
