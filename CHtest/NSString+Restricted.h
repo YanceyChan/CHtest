@@ -63,4 +63,16 @@
  *  @return YES--符合  NO--不符合
  */
 - (BOOL)hasDigitAndXLength:(NSInteger)length;
+/**
+ *  限制可见字符输入
+ *
+ *  @param length 长度
+ *
+ *  @return YES--符合  NO--不符合
+ */
+- (BOOL)anyCharacterLength:(NSInteger)length;
+/**
+ *  限制26个英文字母大小写输入和数字
+ */
+- (BOOL)onlyHasDigitAndAlphabet;
 @end

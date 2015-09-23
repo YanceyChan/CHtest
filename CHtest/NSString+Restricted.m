@@ -46,6 +46,15 @@
     return [self restrictStringFollowRegex:regex];
 }
 
+- (BOOL)anyCharacterLength:(NSInteger)length{
+    NSString *regex = [NSString stringWithFormat:@"^\\S{0,%ld}$", length];
+    return [self restrictStringFollowRegex:regex];
+}
+
+- (BOOL)onlyHasDigitAndAlphabet{
+    return [self restrictStringFollowRegex:@"^[a-zA-Z0-9_]*$"];
+}
+
 
 
 @end
