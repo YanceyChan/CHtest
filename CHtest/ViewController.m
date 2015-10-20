@@ -58,7 +58,7 @@
     
     if ([DateFormatTool verifyEightFigureDate:self.myTextField.text]) {
         self.myViliditydateLabel.text = [DateFormatTool getViliditydateFromApplydate:self.myTextField.text];
-        self.myView.backgroundColor = [UIColor greenColor];
+        self.myView.backgroundColor   = [UIColor colorWithRed:0.3036 green:0.4123 blue:0.9343 alpha:1.0];
         
     }
     else{
@@ -75,6 +75,7 @@
     self.myAgeLabel.text          = @"";
     self.myProvinceLabel.text     = @"";
     self.myViliditydateLabel.text = @"";
+    
     debugMethod();
 }
 
