@@ -21,6 +21,21 @@
     }
 }
 
++ (BOOL) isBlankString:(NSString *)string {
+    if (string == nil || string == NULL) {
+        return YES;
+    }
+    
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        return YES;
+    }
+    return NO;
+}
+
 //验证身份证
 //必须满足以下规则
 //1. 长度必须是18位，前17位必须是数字，第十八位可以是数字或X

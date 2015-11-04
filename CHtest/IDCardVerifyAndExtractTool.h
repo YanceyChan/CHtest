@@ -17,7 +17,7 @@
  *  @return YES--不为空  NO--空
  */
 + (BOOL)verifyIsNotEmpty:(NSString *)idCardNumber;
-
++ (BOOL) isBlankString:(NSString *)string;
 /**
  *  校验18位身份证中的数字是否在规定范围里
  *
