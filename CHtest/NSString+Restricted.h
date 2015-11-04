@@ -63,6 +63,7 @@
  *  @return YES--符合  NO--不符合
  */
 - (BOOL)hasDigitAndXLength:(NSInteger)length;
+
 /**
  *  限制可见字符输入
  *
@@ -71,8 +72,22 @@
  *  @return YES--符合  NO--不符合
  */
 - (BOOL)anyCharacterLength:(NSInteger)length;
+
 /**
- *  限制26个英文字母大小写输入和数字
+ *  限制26个英文字母大小写输入和数字 不区分大小写
  */
 - (BOOL)onlyHasDigitAndAlphabet;
+
+/**
+ *  限制26个英文字母大小写输入和数字 不区分大小写 规定长度
+ */
+- (BOOL)onlyHasDigitAndAlphabetLength:(NSInteger)length;
+
+/**
+ *  判断金额中是否包含小数点并进行相关转换
+ *
+ *  @return 转换后金额
+ */
+- (NSString *)checkDotInAmount;
+
 @end

@@ -97,8 +97,39 @@
         }
     }
     NSString * validityDate = [NSString stringWithFormat:@"%ld", (long)validityYearInt];
-    validityDate = [validityDate stringByAppendingString:[NSString stringWithFormat:@"0%ld", (long)validityMonthInt]];
+    if (validityMonthInt > 9) {
+        validityDate = [validityDate stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)validityMonthInt]];
+    }else{
+        validityDate = [validityDate stringByAppendingString:[NSString stringWithFormat:@"0%ld", (long)validityMonthInt]];
+    }
+    
     validityDate = [validityDate stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)validityDayInt]];
     return validityDate;
+}
+
++ (NSString *)changeDateFormatter:(NSString *)originalDate{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEE MMM dd hh:mm:ss Z yyyy"];
+    //强制采用“en-US”的方式进行转换
+    formatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
+    NSDate *date = [formatter dateFromString:originalDate];
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *changeDate = [dateFormatter stringFromDate:date];
+    return changeDate;
+}
+
++ (BOOL)verifyShortYearAndMonth:(NSString *)date{
+    if ([date length] != 4) {
+        return NO;
+    }
+    
+    NSString *month = [date substringWithRange:NSMakeRange(2, 2)];
+    NSString *regex = @"((0[1-9])|(1[0-2]))";
+    NSPredicate *regexTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    if (![regexTest evaluateWithObject:month]) {
+        return NO;
+    }
+    return YES;
 }
 @end

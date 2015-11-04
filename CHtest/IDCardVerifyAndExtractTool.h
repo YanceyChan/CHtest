@@ -55,7 +55,7 @@
 + (BOOL)getIDCardSex:(NSString *)idCardNumber;
 
 /**
- *  获取身份证对应岁数
+ *  获取身份证对应岁数(YYYYMMDD)
  *
  *  @param birthday 身份证中8位出生日期
  *
@@ -64,7 +64,17 @@
 + (NSString *)getIDCardAge:(NSString *)birthday;
 
 /**
- *  获取身份证对应岁数
+ *  比较出生日期（YYYYMMDD）是否超过输入岁数
+ *
+ *  @param birthday 出生日期 （8位YYYYMMDD）
+ *  @param age      岁数
+ *
+ *  @return YES--大于或等于该岁数   NO--小于岁数
+ */
++ (BOOL)getBirthday:(NSString *)birthday compareAge:(NSInteger)age;
+
+/**
+ *  获取身份证对应省份
  *
  *  @param idCardNumber 身份证号码
  *

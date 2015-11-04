@@ -129,6 +129,14 @@
 
 }
 
++ (BOOL)getBirthday:(NSString *)birthday compareAge:(NSInteger)age{
+    NSString *date = [self getIDCardAge:birthday];
+    if ([date integerValue] < age) {
+        return NO;
+    }
+    return YES;
+}
+
 + (NSString *)getIDCardProvince:(NSString *)idCardNumber{
     NSString *provinceListPath = [[NSBundle mainBundle] pathForResource:@"idCardProvinceList" ofType:@"plist"];
     NSDictionary *provinceDic = [[NSDictionary alloc]initWithContentsOfFile:provinceListPath];

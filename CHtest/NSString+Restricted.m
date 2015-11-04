@@ -38,7 +38,6 @@
         NSString *regex = [NSString stringWithFormat:@"^[-]?[0-9]{0,%ld}$", length];
         return [self restrictStringFollowRegex:regex];
     }
-    
 }
 
 - (BOOL)hasDigitAndXLength:(NSInteger)length{
@@ -55,7 +54,22 @@
     return [self restrictStringFollowRegex:@"^[a-zA-Z0-9_]*$"];
 }
 
+- (BOOL)onlyHasDigitAndAlphabetLength:(NSInteger)length {
+    return [self restrictStringFollowRegex:[NSString stringWithFormat:@"^[a-zA-Z0-9_]{0,%ld}$", length]];
+}
 
-
+- (NSString *)checkDotInAmount {
+    NSString *string = nil;
+    if (![self containsString:@"."]) {
+        string = [self stringByAppendingString:@".00"];
+    } else {
+        if ([[self componentsSeparatedByString:@"."][1] length] == 1) {
+            string = [self stringByAppendingString:@"0"];
+        } else {
+            string = self;
+        }
+    }
+    return string;
+}
 
 @end

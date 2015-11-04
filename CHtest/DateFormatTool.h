@@ -36,4 +36,20 @@
  *  @return 有效日期 当前月12个月后最后一天  20150504  --》 20150430
  */
 + (NSString *)getViliditydateFromApplydate: (NSString *)applydate;
+/**
+ *  转换日期格式 （ EEE MMM dd hh:mm:ss Z yyyy ）  -》  （yyyy-MM-dd）
+ *
+ *  @param originalDate 原始日期
+ *
+ *  @return yyyy-MM-dd
+ */
++ (NSString *)changeDateFormatter:(NSString *)originalDate;
+/**
+ *  校验4位日期格式
+ *
+ *  @param date 4位日期   如：2015年10月16日  则4位日期为：1510
+ *
+ *  @return YES--正确  NO--错误
+ */
++ (BOOL)verifyShortYearAndMonth:(NSString *)date;
 @end
